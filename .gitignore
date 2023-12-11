@@ -7,8 +7,9 @@
 .vscode/*
 __pycache__/*
 database/*
-env_mvp
 env
+env_note
+env_mvp
 env_api
 log/*
 
