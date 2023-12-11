@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estimador de insuficiência cardíaca</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!-- <form action="processar_formulario.php" method="post"> -->
+  <div class="form_div" >
+
+    <h2>Estimador de insuficiência cardíaca</h2>
+
+    <!-- Campo Idade -->
+    <label for="idade">Idade:</label>
+    <input type="number" id="idade" name="idade" required>
+
+    <!-- Campo Sexo -->
+    <label for="sexo">Sexo:</label>
+    <select id="sexo" name="sexo" required>
+      <option value="M">Masculino</option>
+      <option value="F">Feminino</option>
+    </select>
+
+    <!-- Campo ChestPainType -->
+    <label for="chest_pain_type">Tipo de Dor Torácica:</label>
+    <select id="chest_pain_type" name="chest_pain_type" required>
+      <option value="TA">Angina Típica (TA)</option>
+      <option value="ATA">Angina Atípica (ATA)</option>
+      <option value="NAP">Dor Não Anginosa (NAP)</option>
+      <option value="ASY">Assintomática (ASY)</option>
+    </select>
+
+    <!-- Campo PA em Repouso -->
+    <label for="pa_repouso">Pressão Arterial em Repouso:</label>
+    <input type="number" min = 0 id="pa_repouso" name="pa_repouso" required>
+
+    <!-- Campo Colesterol -->
+    <label for="colesterol">Colesterol Sérico:</label>
+    <input type="number" min = 0 id="colesterol" name="colesterol" required>
+
+    <!-- Campo BS em Jejum -->
+    <label for="bs_jejum">Glicemia em Jejum:</label>
+    <select id="bs_jejum" name="bs_jejum" required>
+      <option value="1">BS em Jejum > 120 mg/dl</option>
+      <option value="0">BS em Jejum <= 120 mg/dl</option>
+    </select>
+
+    <!-- Campo ECG em Repouso -->
+    <label for="ecg_repouso">Resultados do Eletrocardiograma em Repouso:</label>
+    <select id="ecg_repouso" name="ecg_repouso" required>
+      <option value="Normal">Normal</option>
+      <option value="ST">Anormalidade das Ondas ST-T (ST)</option>
+      <option value="HVE">Hipertrofia Ventricular Esquerda (HVE)</option>
+    </select>
+
+    <!-- Campo MaxHR -->
+    <label for="max_hr">Frequência Cardíaca Máxima Alcançada [60 - 202]:</label>
+    <input type="number" min="60" max="202" id="max_hr" name="max_hr" required>
+
+    <!-- Campo ExercícioAngina -->
+    <label for="exercicio_angina">Angina Induzida por Exercício:</label>
+    <select id="exercicio_angina" name="exercicio_angina" required>
+      <option value="Y">Sim</option>
+      <option value="N">Não</option>
+    </select>
+
+    <!-- Campo Oldpeak -->
+    <label for="oldpeak">Oldpeak (ST):</label>
+    <input type="number" step="0.1" id="oldpeak" name="oldpeak" required>
+
+    <!-- Campo ST_Slope -->
+    <label for="st_slope">Inclinação do Segmento ST do Pico do Exercício:</label>
+    <select id="st_slope" name="st_slope" required>
+      <option value="Up">Subida (Up)</option>
+      <option value="Flat">Plano (Flat)</option>
+      <option value="Down">Descida (Down)</option>
+    </select>
+
+    <!-- Botão de Envio -->
+    <!-- <button type="submit">Estimar</button> -->
+    <button onclick="RealizaDiagnostico()">Estimar</button>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+
+</html>
